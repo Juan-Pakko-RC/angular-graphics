@@ -1,2 +1,22 @@
-<h1> Users forms </h1>
-
+<div class="container py-4">
+    <h1> Users forms </h1>
+<form #form="ngForm" (ngSubmit)="send()">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="name" class="form-control" id="name" [ngModelOptions]="{standalone: true}"  [(ngModel)]="user.name" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">E-mail</label>
+    <input type="email" class="form-control" id="email" [ngModelOptions]="{standalone: true}"  [(ngModel)]="user.email" required>
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone Number</label>
+    <input type="phone" class="form-control" id="phone" [ngModelOptions]="{standalone: true}"  [(ngModel)]="user.phone" required>
+  </div>
+  <div class="mb-3">
+    <label for="address" class="form-label">Adress</label>
+    <input type="address" class="form-control" id="address" [ngModelOptions]="{standalone: true}"  [(ngModel)]="user.address" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Send</button>
+</form>
+</div>
